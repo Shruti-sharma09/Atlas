@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas — Design System Showcase</title>
+<meta name="description" content="A living design system: color tokens, typography, spacing, and reusable UI components with copy-paste code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+
+<div class="shell">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">A</span>
+      <span class="brand-name">Atlas</span>
+    </div>
+    <p class="sidebar-tag">A living design system</p>
+
+    <div class="theme-switch">
+      <button class="theme-btn active" data-theme-choice="light">☀ Daylight</button>
+      <button class="theme-btn" data-theme-choice="dark">☾ Midnight</button>
+    </div>
+
+    <div class="nav-group">
+      <p class="nav-group-title">Foundations</p>
+      <a href="#colors" class="nav-link active" data-section="colors">Colors</a>
+      <a href="#typography" class="nav-link" data-section="typography">Typography</a>
+      <a href="#spacing" class="nav-link" data-section="spacing">Spacing</a>
+    </div>
+
+    <div class="nav-group">
+      <p class="nav-group-title">Components</p>
+      <a href="#buttons" class="nav-link" data-section="buttons">Buttons</a>
+      <a href="#forms" class="nav-link" data-section="forms">Form Elements</a>
+      <a href="#cards" class="nav-link" data-section="cards">Cards</a>
+      <a href="#badges" class="nav-link" data-section="badges">Badges</a>
+      <a href="#feedback" class="nav-link" data-section="feedback">Modal &amp; Tooltip</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- COLORS -->
+    <section class="doc-section active" id="colors">
+      <p class="section-eyebrow">Foundations</p>
+      <h1 class="section-title">Colors</h1>
+      <p class="section-lede">Every color in Atlas is a token, not a hardcoded hex — switch themes above and watch every swatch update.</p>
+
+      <div class="swatch-grid" id="colorSwatches"></div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="doc-section" id="typography">
+      <p class="section-eyebrow">Foundations</p>
+      <h1 class="section-title">Typography</h1>
+      <p class="section-lede">Two typefaces: Plus Jakarta Sans for display and headings, Inter for body text and UI.</p>
+
+      <div class="type-scale">
+        <div class="type-row"><span class="type-sample display-1">Display / 40px</span><span class="type-meta">Plus Jakarta Sans · 800</span></div>
+        <div class="type-row"><span class="type-sample heading-1">Heading 1 / 30px</span><span class="type-meta">Plus Jakarta Sans · 700</span></div>
+        <div class="type-row"><span class="type-sample heading-2">Heading 2 / 24px</span><span class="type-meta">Plus Jakarta Sans · 700</span></div>
+        <div class="type-row"><span class="type-sample heading-3">Heading 3 / 19px</span><span class="type-meta">Plus Jakarta Sans · 600</span></div>
+        <div class="type-row"><span class="type-sample body-text">Body text / 15px — the quick brown fox jumps over the lazy dog.</span><span class="type-meta">Inter · 400</span></div>
+        <div class="type-row"><span class="type-sample small-text">Small / caption text — used for meta info and hints.</span><span class="type-meta">Inter · 400</span></div>
+        <div class="type-row"><span class="type-sample mono-text">const token = "code sample";</span><span class="type-meta">JetBrains Mono · 400</span></div>
+      </div>
+    </section>
+
+    <!-- SPACING -->
+    <section class="doc-section" id="spacing">
+      <p class="section-eyebrow">Foundations</p>
+      <h1 class="section-title">Spacing</h1>
+      <p class="section-lede">A consistent spacing scale keeps every component's padding and gaps visually related.</p>
+
+      <div class="spacing-scale" id="spacingScale"></div>
+    </section>
+
+    <!-- BUTTONS -->
+    <section class="doc-section" id="buttons">
+      <p class="section-eyebrow">Components</p>
+      <h1 class="section-title">Buttons</h1>
+      <p class="section-lede">Four variants, three sizes, and disabled states — all built from the same token set.</p>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Variants</h3>
+        <div class="demo-row">
+          <button class="ui-btn ui-btn-primary">Primary</button>
+          <button class="ui-btn ui-btn-secondary">Secondary</button>
+          <button class="ui-btn ui-btn-outline">Outline</button>
+          <button class="ui-btn ui-btn-ghost">Ghost</button>
+          <button class="ui-btn ui-btn-danger">Danger</button>
+        </div>
+        <button class="code-toggle" data-target="code-buttons">&lt;/&gt; View code</button>
+        <pre class="code-block" id="code-buttons" hidden><code>&lt;button class="ui-btn ui-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="ui-btn ui-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="ui-btn ui-btn-outline"&gt;Outline&lt;/button&gt;
+&lt;button class="ui-btn ui-btn-ghost"&gt;Ghost&lt;/button&gt;
+&lt;button class="ui-btn ui-btn-danger"&gt;Danger&lt;/button&gt;</code></pre>
+      </div>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Sizes</h3>
+        <div class="demo-row demo-row-align">
+          <button class="ui-btn ui-btn-primary ui-btn-sm">Small</button>
+          <button class="ui-btn ui-btn-primary">Medium</button>
+          <button class="ui-btn ui-btn-primary ui-btn-lg">Large</button>
+        </div>
+      </div>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Disabled</h3>
+        <div class="demo-row">
+          <button class="ui-btn ui-btn-primary" disabled>Primary</button>
+          <button class="ui-btn ui-btn-outline" disabled>Outline</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMS -->
+    <section class="doc-section" id="forms">
+      <p class="section-eyebrow">Components</p>
+      <h1 class="section-title">Form Elements</h1>
+      <p class="section-lede">Inputs, toggles, and selects with clear focus and error states.</p>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Text input</h3>
+        <div class="demo-row demo-row-col">
+          <div class="form-field">
+            <label class="form-label">Default</label>
+            <input type="text" class="ui-input" placeholder="you@example.com">
+          </div>
+          <div class="form-field">
+            <label class="form-label">Error state</label>
+            <input type="text" class="ui-input ui-input-error" value="not-an-email">
+            <span class="form-error">Please enter a valid email address.</span>
+          </div>
+        </div>
+        <button class="code-toggle" data-target="code-input">&lt;/&gt; View code</button>
+        <pre class="code-block" id="code-input" hidden><code>&lt;input type="text" class="ui-input" placeholder="you@example.com"&gt;
+
+&lt;input type="text" class="ui-input ui-input-error"&gt;
+&lt;span class="form-error"&gt;Please enter a valid email address.&lt;/span&gt;</code></pre>
+      </div>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Toggle &amp; checkbox</h3>
+        <div class="demo-row">
+          <label class="ui-toggle">
+            <input type="checkbox" checked>
+            <span class="ui-toggle-track"><span class="ui-toggle-thumb"></span></span>
+            <span class="ui-toggle-label">Notifications</span>
+          </label>
+          <label class="ui-checkbox">
+            <input type="checkbox" checked>
+            <span class="ui-checkbox-box"></span>
+            <span class="ui-checkbox-label">Remember me</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Select</h3>
+        <div class="demo-row">
+          <select class="ui-select">
+            <option>Figma</option>
+            <option>Sketch</option>
+            <option>Adobe XD</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section class="doc-section" id="cards">
+      <p class="section-eyebrow">Components</p>
+      <h1 class="section-title">Cards</h1>
+      <p class="section-lede">Flexible containers for grouping related content.</p>
+
+      <div class="demo-row demo-row-cards">
+        <div class="ui-card">
+          <div class="ui-card-thumb"></div>
+          <h4 class="ui-card-title">Basic card</h4>
+          <p class="ui-card-desc">A simple content container with a thumbnail, title, and description text.</p>
+        </div>
+        <div class="ui-card ui-card-stat">
+          <span class="ui-card-stat-label">Active users</span>
+          <span class="ui-card-stat-value">2,481</span>
+          <span class="ui-card-stat-delta">▲ 12.4% this week</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BADGES -->
+    <section class="doc-section" id="badges">
+      <p class="section-eyebrow">Components</p>
+      <h1 class="section-title">Badges</h1>
+      <p class="section-lede">Compact status indicators for lists, tables, and cards.</p>
+
+      <div class="demo-row">
+        <span class="ui-badge ui-badge-success">Live</span>
+        <span class="ui-badge ui-badge-warn">In review</span>
+        <span class="ui-badge ui-badge-danger">Blocked</span>
+        <span class="ui-badge ui-badge-neutral">Draft</span>
+        <span class="ui-badge ui-badge-accent">New</span>
+      </div>
+    </section>
+
+    <!-- FEEDBACK: MODAL & TOOLTIP -->
+    <section class="doc-section" id="feedback">
+      <p class="section-eyebrow">Components</p>
+      <h1 class="section-title">Modal &amp; Tooltip</h1>
+      <p class="section-lede">Overlay patterns for confirmations, details, and contextual hints.</p>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Modal</h3>
+        <div class="demo-row">
+          <button class="ui-btn ui-btn-primary" id="openModalBtn">Open modal</button>
+        </div>
+      </div>
+
+      <div class="demo-block">
+        <h3 class="demo-title">Tooltip</h3>
+        <div class="demo-row">
+          <span class="ui-tooltip-wrap">
+            <button class="ui-btn ui-btn-outline">Hover me</button>
+            <span class="ui-tooltip">Tooltips show contextual hints on hover</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- MODAL DEMO -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="ui-modal">
+    <h3 class="ui-modal-title">Delete this file?</h3>
+    <p class="ui-modal-body">This action can't be undone. The file will be permanently removed from your workspace.</p>
+    <div class="ui-modal-actions">
+      <button class="ui-btn ui-btn-outline" id="modalCancelBtn">Cancel</button>
+      <button class="ui-btn ui-btn-danger" id="modalConfirmBtn">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
