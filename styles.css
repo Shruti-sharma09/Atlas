@@ -546,6 +546,9 @@ a{ color: inherit; text-decoration: none; }
   z-index: 50;
   padding: 20px;
 }
+.modal-backdrop[hidden]{
+  display: none;
+}
 
 .ui-modal{
   width: 100%;
