@@ -2,8 +2,6 @@
 
 A living design system: color tokens, typography, spacing, and a full set of reusable UI components — buttons, forms, cards, badges, modals, tooltips — each with live examples and copy-paste code. Switch between light ("Daylight") and dark ("Midnight") themes and watch every single component update, because nothing is hardcoded — it's all CSS custom properties.
 
-**[Live Demo](#)** — replace this with your GitHub Pages link after deploying (steps below)
-
 ![Atlas preview](https://via.placeholder.com/900x500/F6F7F9/4F46E5?text=Atlas+%E2%80%94+Design+System+Showcase)
 
 ## Features
